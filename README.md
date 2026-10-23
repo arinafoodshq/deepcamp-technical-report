@@ -1,7 +1,7 @@
 # From Content Consumption to Demonstrable Capability
 
 <p align="center">
-  <img src="assets/logo.svg" alt="DeepCamp" width="220">
+  <img src="assets/logo.png" alt="DeepCamp" width="220">
 </p>
 
 ## The DeepCamp learning engine: designing a goal-driven AI system on top of 830,000+ free learning resources
@@ -396,7 +396,7 @@ sequenceDiagram
             W->>B: stream generation (3,000 tokens)
             B-->>U: SSE token stream
             W->>D: persist explainer (model, prompt_ver) + release lock
-            Note over D: versioned (video_id, version);<br/>community thumbs rate versions;<br/>prompt_ver bump invalidates cache
+            Note over D: versioned (video_id, version),<br/>community thumbs rate versions,<br/>prompt_ver bump invalidates cache
         end
     end
 ```
@@ -451,7 +451,7 @@ flowchart LR
     end
     K["Keyword classification<br/>vs skill graph (focus area, skills)"]
     AI["Ambiguous jobs → 70B AI matcher<br/>(batched: focus area, ≤6 skills,<br/>≤5 missing skills, validated)"]
-    ES["English-score heuristic<br/>(0.5 threshold; region boosts)"]
+    ES["English-score heuristic<br/>(0.5 threshold, region boosts)"]
     JL["Materialize job_lessons:<br/>≤14 scored lessons per job<br/>(relevance .45 + practical .35 + popularity .08)"]
     PR["Prep roadmap:<br/>Foundation → Build & apply → Polish & interview"]
     FETCH --> K --> AI --> ES --> JL --> PR
